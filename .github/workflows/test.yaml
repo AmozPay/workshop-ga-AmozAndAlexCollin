@@ -24,12 +24,12 @@ jobs:
         with:
           ref: dev
       - name: run unit tests
-        run: make tests_run > coverage_outputs.txt
+        run: make tests_run > coverage_outputs
       - name: run coverage
-        run: make coverage >> coverage_outputs.txt
+        run: make coverage >> coverage_outputs
       - name: load artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: coverage_outputs
-          path: coverage_outputs.txt
+          path: ./
