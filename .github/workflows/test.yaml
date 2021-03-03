@@ -33,3 +33,21 @@ jobs:
         with:
           name: coverage_outputs
           path: ./
+      
+    functional-tests:
+      name: functional tests
+      runs-on: ubuntu-20.04
+      container: epitechcontent/epitest-docker
+      steps:
+        - name: checkout
+          uses: actions/checkout@v2
+          with:
+            ref: dev
+        - name: run functional test  
+          run: ./functional-test.sh > function-tests_outputs
+        - name: load artifact
+            uses: actions/upload-artifact@v2
+            with:
+              name: function-tests_outputs
+              path: ./
+          
