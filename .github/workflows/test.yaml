@@ -21,7 +21,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
-        ref: my-branch
+          ref: dev
       - name: run unit tests
         run: make tests_run
       - name: run coverage
