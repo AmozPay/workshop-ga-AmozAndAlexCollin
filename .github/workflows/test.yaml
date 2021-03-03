@@ -1,0 +1,16 @@
+name: 'Test'
+description: 'First github action'
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-20.04
+    name: hello-world
+    steps:
+      - name: Say hello world
+        run: echo "Welcome to the Github Actions workshop !"
