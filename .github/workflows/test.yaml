@@ -1,5 +1,4 @@
 name: 'Test'
-description: 'First github action'
 
 on:
   push:
