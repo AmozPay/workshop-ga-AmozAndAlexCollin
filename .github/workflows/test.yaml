@@ -15,6 +15,7 @@ jobs:
         run: echo "Welcome to the Github Actions workshop !"
   
   unit-test:
+    runs-on: ubuntu-20.04
     name: unit-test
     container: epitechcontent/epitest-docker
     steps:
